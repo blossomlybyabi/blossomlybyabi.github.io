@@ -643,8 +643,10 @@ img {
 
 .features-showcase {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 32px;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 .feature-item {
@@ -957,8 +959,7 @@ img {
 
 /* --- Responsive --- */
 @media (max-width: 1024px) {
-    .features-grid,
-    .features-showcase {
+    .features-grid {
         grid-template-columns: repeat(3, 1fr);
     }
 
