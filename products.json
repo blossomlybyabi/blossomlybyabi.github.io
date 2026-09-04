@@ -1,6 +1,15 @@
 {
   "products": [
     {
+      "id": "bella",
+      "name": "Bella",
+      "description": "A bright handmade bouquet crafted from fuzzy wire, featuring cheerful yellow sunflowers, delicate white daisies, and fresh green leaves.",
+      "price": "₱750.00",
+      "category": "",
+      "image": "products/bella.jpeg",
+      "txt_file": "products/bella.txt"
+    },
+    {
       "id": "nutrition_hat",
       "name": "Nutrition Hat",
       "description": "This colorful nutrition hat is a fun, creative accessory handmade with soft, flexible fuzzy wires. Designed to celebrate healthy eating, the hat features playful shapes inspired by fruits, vegetables, and other nutritious foods. Each fuzzy wire is carefully twisted and arranged to create a unique, eye-catching design that is lightweight and comfortable to wear. Perfect for school projects, nutrition fairs, health-awareness events, themed parties, or classroom presentations, this hat makes learning about balanced diets more exciting. Its bright colors and imaginative style encourage children and adults to think about the importance of choosing healthy foods.",
@@ -17,6 +26,15 @@
       "category": "",
       "image": "products/single_bouquet.jpg",
       "txt_file": "products/single_bouquet.txt"
+    },
+    {
+      "id": "yuni",
+      "name": "Yuni",
+      "description": "A fuzzy wire bouquet filled with pink flowers, delicate blossoms, and lush green leaves.",
+      "price": "₱800.00",
+      "category": "",
+      "image": "products/yuni.jpg",
+      "txt_file": "products/yuni.txt"
     }
   ]
 }
