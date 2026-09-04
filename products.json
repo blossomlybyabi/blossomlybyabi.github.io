@@ -1,6 +1,15 @@
 {
   "products": [
     {
+      "id": "amaryl",
+      "name": "Amaryl",
+      "description": "A handmade bouquet featuring bright yellow flowers, delicate white blossoms, and fresh green leaves. The arrangement is wrapped in soft cream paper with elegant pleated folds and finished with a decorative ribbon.",
+      "price": "₱450.00",
+      "category": "",
+      "image": "products/Amaryl.jpg",
+      "txt_file": "products/Amaryl.txt"
+    },
+    {
       "id": "bella",
       "name": "Bella",
       "description": "A bright handmade bouquet crafted from fuzzy wire, featuring cheerful yellow sunflowers, delicate white daisies, and fresh green leaves.",
@@ -17,6 +26,15 @@
       "category": "Seasonal",
       "image": "products/nutri_hat.jpg",
       "txt_file": "products/nutri_hat.txt"
+    },
+    {
+      "id": "rona",
+      "name": "Rona",
+      "description": "A beautiful bouquet of soft pink tulip-inspired flowers, delicately arranged with tiny pink-and-white blooms and fresh green foliage.",
+      "price": "₱900.00",
+      "category": "",
+      "image": "products/Rona.png",
+      "txt_file": "products/Rona.txt"
     },
     {
       "id": "single_bouquet",
