@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blossomly by Abi</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Announcement Bar -->
+    <div class="announcement-bar" id="announcementBar" style="display:none;">
+        <p id="announcementText"></p>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="header-inner">
+            <button class="mobile-menu-btn" aria-label="Menu" onclick="toggleMobileMenu()">
+                <span></span><span></span><span></span>
+            </button>
+
+            <nav class="nav-desktop">
+                <a href="#home">Home</a>
+                <a href="#products">Flower Shop</a>
+                <a href="#about">About Us</a>
+                <a href="#contact">Contact</a>
+            </nav>
+
+            <a href="#home" class="logo">
+                <h1>Blossomly By Abi</h1>
+            </a>
+
+            <div class="header-actions">
+                <button class="search-btn" aria-label="Search" onclick="toggleSearch()">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div class="mobile-menu" id="mobileMenu">
+            <a href="#home" onclick="closeMobileMenu()">Home</a>
+            <a href="#products" onclick="closeMobileMenu()">Flower Shop</a>
+            <a href="#about" onclick="closeMobileMenu()">About Us</a>
+            <a href="#contact" onclick="closeMobileMenu()">Contact</a>
+        </div>
+
+        <!-- Search Overlay -->
+        <div class="search-overlay" id="searchOverlay">
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="Search flowers..." oninput="filterProducts()" onkeydown="searchOnEnter(event)">
+                <button onclick="toggleSearch()" class="search-close">&times;</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <span class="hero-tag">Welcome to our store</span>
+            <h2>Let Flowers Bloom</h2>
+            <p>Handcrafted arrangements made with Fuzzy wires and delivered with care from heart.</p>
+            <a href="#products" class="btn btn-primary">Shop All Flowers</a>
+        </div>
+    </section>
+
+    <!-- Category Cards -->
+    <section class="categories">
+        <div class="container">
+            <div class="category-grid">
+                <div class="category-card">
+                    <div class="category-icon">
+                        <svg viewBox="0 0 64 64" width="48" height="48"><circle cx="32" cy="32" r="28" fill="none" stroke="currentColor" stroke-width="2"/><path d="M32 16c-4 0-8 4-8 10s4 12 8 16c4-4 8-10 8-16s-4-10-8-10z" fill="currentColor" opacity="0.3"/></svg>
+                    </div>
+                    <h3>Wedding Flowers</h3>
+                    <p>Handcrafted fresh bridal bouquets for your perfect day</p>
+                    <a href="#products" class="category-link">Shop Wedding →</a>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon">
+                        <svg viewBox="0 0 64 64" width="48" height="48"><circle cx="32" cy="32" r="28" fill="none" stroke="currentColor" stroke-width="2"/><path d="M20 44 L32 20 L44 44 Z" fill="currentColor" opacity="0.3"/></svg>
+                    </div>
+                    <h3>Birthday Blooms</h3>
+                    <p>Celebrate with vibrant arrangements that brighten any birthday</p>
+                    <a href="#products" class="category-link">Shop Birthday →</a>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon">
+                        <svg viewBox="0 0 64 64" width="48" height="48"><circle cx="32" cy="32" r="28" fill="none" stroke="currentColor" stroke-width="2"/><path d="M24 40 C24 28 32 20 32 20 C32 20 40 28 40 40" fill="currentColor" opacity="0.3"/></svg>
+                    </div>
+                    <h3>Custom Made Order</h3>
+                    <p>Share your vision with us, and we’ll handcraft an arrangement tailored to your order.</p>
+                    <a href="#contact" class="category-link">Make an Order →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section class="featured" id="products">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Our Collection</span>
+                <h2>Browse Our Latest Products</h2>
+                <p>Our finest seasonal blooms, hand-selected and arranged with care. Shop now.</p>
+            </div>
+
+            <!-- Category Filter -->
+            <div class="filter-bar" id="filterBar">
+                <button class="filter-btn active" data-category="all" onclick="filterByCategory('all')">All</button>
+            </div>
+
+            <!-- Product Grid -->
+            <div class="product-grid" id="productGrid">
+                <!-- Products loaded via JS -->
+            </div>
+
+            <div class="no-products" id="noProducts" style="display:none;">
+                <p>No products found.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-content">
+                    <span class="section-tag">About Us</span>
+                    <h2>Why Choose Blossomly by Abi?</h2>
+                </div>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🌸</div>
+                    <h3>Handcrafted Fuzzy Wire Flowers</h3>
+                    <p>Every arrangement is lovingly handcrafted from soft fuzzy wires, capturing the beauty of real blooms that never wilt.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">💐</div>
+                    <h3>Handcrafted with Care</h3>
+                    <p>Every bouquet is designed by experienced florists with attention to detail and creativity.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🚚</div>
+                    <h3>Reliable Local Delivery</h3>
+                    <p>Fast and dependable flower delivery to homes, workplaces, hospitals, and event venues.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">💌</div>
+                    <h3>Personal Touch</h3>
+                    <p>Add a personalised message to make your gift even more meaningful.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Features -->
+    <section class="our-features">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">What Makes Us Unique</span>
+                <h2>Our Features</h2>
+            </div>
+            <div class="features-showcase">
+                <div class="feature-item">
+                    <div class="feature-icon-large">🌿</div>
+                    <h3>Fresh & Beautiful</h3>
+                    <p>Handpicked flowers, arranged with love. Premium blooms designed for unforgettable occasions.</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon-large">♻️</div>
+                    <h3>Seasonal & Sustainable</h3>
+                    <p>We choose seasonal flowers and eco-friendly packaging inspired by the beauty of each season.</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon-large">❤️</div>
+                    <h3>Loved by Customers</h3>
+                    <p>Trusted by hundreds of happy customers. Our most-loved arrangements featuring seasonal flowers.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Elegant Collection Banner -->
+    <section class="collection-banner">
+        <div class="container">
+            <div class="banner-content">
+                <span class="banner-tag">New Collection</span>
+                <h2>Elegant Florals for Every Occasion</h2>
+                <p>Discover our curated selection of premium bouquets, handcrafted with the finest seasonal blooms. Each arrangement tells a story of elegance and natural beauty.</p>
+                <a href="#products" class="btn btn-primary">Explore Collection</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <span class="section-tag">Get in Touch</span>
+                    <h2>Contact Us</h2>
+                    <p>Have a question or want to place a custom order? We'd love to hear from you. Reach out to us directly:</p>
+                </div>
+                <div class="contact-methods">
+                    <a href="https://www.facebook.com/BlossomlyByAbi" target="_blank" rel="noopener" class="contact-method">
+                        <div class="contact-method-icon">🤍</div>
+                        <div class="contact-method-info">
+                            <h4>Facebook</h4>
+                            <p>Follow us and send us a message on our page</p>
+                        </div>
+                        <span class="contact-method-arrow">→</span>
+                    </a>
+                    <a href="https://m.me/BlossomlyByAbi" target="_blank" rel="noopener" class="contact-method">
+                        <div class="contact-method-icon">💬</div>
+                        <div class="contact-method-info">
+                            <h4>Messenger</h4>
+                            <p>Chat with us on Messenger for quick replies</p>
+                        </div>
+                        <span class="contact-method-arrow">→</span>
+                    </a>
+                    <a href="mailto:hello@blossomly.com" class="contact-method">
+                        <div class="contact-method-icon">✉️</div>
+                        <div class="contact-method-info">
+                            <h4>Email</h4>
+                            <p>Write to us at hello@blossomly.com</p>
+                        </div>
+                        <span class="contact-method-arrow">→</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h3>Blossomly</h3>
+                    <p>Fresh flowers and gift bundles delivered with care. Making every moment special.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <a href="#home">Home</a>
+                    <a href="#products">Flower Shop</a>
+                    <a href="#about">About Us</a>
+                    <a href="#contact">Contact</a>
+                </div>
+                <div class="footer-links">
+                    <h4>Categories</h4>
+                    <a href="#products">Wedding Flowers</a>
+                    <a href="#products">Birthday Blooms</a>
+                    <a href="#products">Funeral Tributes</a>
+                    <a href="#products">Seasonal Bouquets</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Blossomly. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Product Modal -->
+    <div class="modal-overlay" id="productModal" onclick="closeModal()">
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <button class="modal-close" onclick="closeModal()">&times;</button>
+            <div class="modal-body">
+                <div class="modal-image">
+                    <img id="modalImage" src="" alt="">
+                </div>
+                <div class="modal-info">
+                    <span class="modal-category" id="modalCategory"></span>
+                    <h2 id="modalName"></h2>
+                    <p class="modal-price" id="modalPrice"></p>
+                    <p class="modal-description" id="modalDescription"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

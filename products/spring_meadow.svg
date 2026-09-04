@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="600" viewBox="0 0 600 600">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#90EE90;stop-opacity:0.3" />
+      <stop offset="100%" style="stop-color:#FFD700;stop-opacity:0.5" />
+    </linearGradient>
+  </defs>
+  <rect width="600" height="600" fill="url(#bg)"/>
+  <circle cx="300" cy="250" r="120" fill="#90EE90" opacity="0.6"/>
+  <circle cx="260" cy="220" r="80" fill="#FFD700" opacity="0.7"/>
+  <circle cx="340" cy="280" r="60" fill="#90EE90" opacity="0.5"/>
+  <text x="300" y="450" text-anchor="middle" font-family="Georgia, serif" font-size="28" fill="#333">Spring Meadow</text>
+  <text x="300" y="490" text-anchor="middle" font-family="Georgia, serif" font-size="16" fill="#666">Placeholder Image</text>
+</svg>

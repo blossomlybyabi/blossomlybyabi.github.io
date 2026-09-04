@@ -1,0 +1,67 @@
+{
+  "products": [
+    {
+      "id": "lavender_dreams",
+      "name": "Lavender Dreams",
+      "description": "Soothing lavender stems mixed with purple statice and eucalyptus. A calming bouquet that fills any space with a gentle fragrance and serene beauty. Ideal for relaxation and self-care.",
+      "price": "₱32.00",
+      "category": "Seasonal",
+      "image": "products/lavender_dreams.svg",
+      "txt_file": "products/lavender_dreams.txt"
+    },
+    {
+      "id": "nutrition_hat",
+      "name": "Nutrition Hat",
+      "description": "This colorful nutrition hat is a fun, creative accessory handmade with soft, flexible fuzzy wires. Designed to celebrate healthy eating, the hat features playful shapes inspired by fruits, vegetables, and other nutritious foods. Each fuzzy wire is carefully twisted and arranged to create a unique, eye-catching design that is lightweight and comfortable to wear. Perfect for school projects, nutrition fairs, health-awareness events, themed parties, or classroom presentations, this hat makes learning about balanced diets more exciting. Its bright colors and imaginative style encourage children and adults to think about the importance of choosing healthy foods.",
+      "price": "₱750.00",
+      "category": "Seasonal",
+      "image": "products/nutri_hat.jpg",
+      "txt_file": "products/nutri_hat.txt"
+    },
+    {
+      "id": "olive_white_roses",
+      "name": "Olive & White Roses",
+      "description": "A delicate arrangement of olive branches and white roses, perfect for weddings and anniversaries. This elegant bouquet combines rustic charm with timeless beauty, featuring soft green tones and creamy white blooms.",
+      "price": "₱35.00",
+      "category": "Wedding",
+      "image": "products/olive.svg",
+      "txt_file": "products/olive.txt"
+    },
+    {
+      "id": "peony_paradise",
+      "name": "Peony Paradise",
+      "description": "Luxurious pink peonies arranged with soft roses and delicate baby's breath. A romantic and opulent bouquet that speaks of elegance and love. Perfect for anniversaries and special occasions.",
+      "price": "₱45.00",
+      "category": "Anniversary",
+      "image": "products/peony_paradise.svg",
+      "txt_file": "products/peony_paradise.txt"
+    },
+    {
+      "id": "spring_meadow",
+      "name": "Spring Meadow",
+      "description": "A wildflower-inspired mix of daisies, cornflowers, and fresh greenery. Captures the essence of a blooming meadow in spring. A cheerful and natural arrangement for everyday beauty.",
+      "price": "₱25.00",
+      "category": "Seasonal",
+      "image": "products/spring_meadow.svg",
+      "txt_file": "products/spring_meadow.txt"
+    },
+    {
+      "id": "sunrise_bouquet",
+      "name": "Sunrise Bouquet",
+      "description": "Bright and cheerful sunflowers paired with orange gerberas and fresh greenery. A vibrant arrangement that brings warmth and joy to any room. Perfect for birthdays and celebrations.",
+      "price": "₱28.00",
+      "category": "Birthday",
+      "image": "products/sunrise_bouquet.svg",
+      "txt_file": "products/sunrise_bouquet.txt"
+    },
+    {
+      "id": "white_elegance",
+      "name": "White Elegance",
+      "description": "Pure white lilies and roses crafted into a sophisticated arrangement. A timeless classic that conveys respect and reverence. Suitable for funerals, memorials, and sympathy occasions.",
+      "price": "₱40.00",
+      "category": "Funeral",
+      "image": "products/white_elegance.svg",
+      "txt_file": "products/white_elegance.txt"
+    }
+  ]
+}
